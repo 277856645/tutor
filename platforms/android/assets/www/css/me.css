@@ -1,0 +1,199 @@
+/* 基本样式 */
+body {
+	background-color: #FAFAFA;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+
+img {
+	border: 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+
+#card,
+#experience,
+#publish {
+	float: left;
+}
+
+#card[state="on"],
+#experience[state="on"],
+#publish[state="on"] {
+	color: #4196D2;
+	background-color: #fff;
+}
+
+#card[state="off"],
+#experience[state="off"],
+#publish[state="off"] {
+	color: #D7D7D7;
+}
+
+/* 我的名片 */
+.main .switch-item {
+	float: left;
+	width: 100%;
+}
+
+.switch-item .card-title {
+	font-family: "楷体", "微软雅黑", "幼圆", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.switch-item .card-content {
+	font-family: "楷体", "微软雅黑", "幼圆", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #888;
+	margin-left: 1px;
+}
+
+#card-scroller {
+	width: 100%;
+	height: 100%;
+}
+
+#card-scroller .scroller {
+	padding-bottom: 10px;
+}
+
+#card-scroller .scroller > div {
+	margin: 0 10px;
+	padding-bottom: 10px;
+	cursor: default;
+}
+
+#card-scroller .scroller > div:first-child {
+	padding-top: 10px;
+}
+
+.card-info-change {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+}
+
+.card-change-layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+	background-color: #555;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.card-change-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10001;
+	background-color: #555;
+	width: 100%;
+	font-family: "幼圆", Arial, Helvetica, sans-serif;
+}
+
+.simple-text,
+.education-part,
+.sex-part,
+.contact-part {
+	padding: 15px 10px;
+	border-bottom: 1px solid #666;
+}
+
+.simple-text > div:nth-child(1),
+.education-part > div:nth-child(1),
+.sex-part > div:nth-child(1),
+.contact-part > div:nth-child(1) {
+	color: white;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+.simple-text > div:nth-child(2),
+.education-part > div:nth-child(2),
+.sex-part > div:nth-child(2),
+.contact-part > div:nth-child(2) {
+	padding-bottom: 10px;
+}
+
+.simple-text > div:nth-child(2) input,
+.contact-part > div:nth-child(2) input {
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #666;
+	padding: 0 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+}
+
+.contact-part > div:nth-child(2) input:nth-child(1) {
+	margin-bottom: 5px;
+}
+
+.education-part > div:nth-child(2) select,
+.sex-part > div:nth-child(2) select {
+	width: 100%;
+	height: 25px;
+	line-height: 16px;
+}
+
+.education-part > div:nth-child(2) select option,
+.sex-part > div:nth-child(2) select option {
+	padding-left: 10px;
+}
+
+.simple-text > div:nth-child(3) input:nth-child(1),
+.education-part > div:nth-child(3) input:nth-child(1),
+.sex-part > div:nth-child(3) input:nth-child(1),
+.contact-part > div:nth-child(3) input:nth-child(1) {
+	float: left;
+	width: 48%;
+}
+
+.simple-text > div:nth-child(3) input:nth-child(2),
+.education-part > div:nth-child(3) input:nth-child(2),
+.sex-part > div:nth-child(3) input:nth-child(2),
+.contact-part > div:nth-child(3) input:nth-child(2) {
+	float: right;
+	width: 48%;
+}
+
+.btn {
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	padding: 1px 0;
+	font-size: 12px;
+	outline: none;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+/* 响应设计 */	
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) {}
+

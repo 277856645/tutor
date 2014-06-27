@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>找家教</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/sign.css" />
+		
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/sign.js"></script>
+	</head>
+	<body>
+		<form id="sign-form">
+			<div class="container">
+				<div id="serverMsg" class="server-msg hide"><div class="server-layer"></div><div class="server-content"></div></div>
+				<div class="wrapper">
+					<div class="logo">
+						<img src="img/tutor-sign_03.jpg" />
+					</div>
+					<div class="signsheet my-corner-all my-corner-clip">
+						<div class="icon">
+							<img src="img/tutor-sign_07.jpg" class="my-corner-left my-corner-clip" />
+						</div>
+						<div class="blank">
+							<input type="text" id="name" name="name" placeholder="用户名" maxlength="50" autocomplete="off" 
+									class="input my-corner-right my-corner-clip" autofocus="autofocus" />
+						</div>
+					</div>
+					<div class="signsheet my-corner-all my-corner-clip">
+						<div class="icon">
+							<img src="img/tutor-sign_12.jpg" class="my-corner-left my-corner-clip" />
+						</div>
+						<div class="blank">							
+							<input type="password" id="passwd" name="passwd" maxlength="20" placeholder="密码"  
+									class="input my-corner-right my-corner-clip" />
+						</div>
+					</div>
+					<div class="signsheet my-corner-all my-corner-clip">
+						<div class="icon">
+							<img src="img/tutor-sign_12.jpg" class="my-corner-left my-corner-clip" />
+						</div>
+						<div class="blank">
+							<input type="password" id="passwdConf" name="passwdConf" maxlength="20" placeholder="密码确认" 
+									class="input my-corner-right my-corner-clip" />
+						</div>
+					</div>
+					<div class="sign">
+						<input type="button" value="注 册" class="submit my-corner-clip my-corner-all" 
+								onclick="submitForm(this);"
+								onfocus="this.blur();" />
+					</div>
+					<div class="remind">
+						<span class="hascount">已有账户?</span>
+						<span class="haswsign"><a href="login.html">立即登录</a></span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

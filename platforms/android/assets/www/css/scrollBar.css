@@ -1,0 +1,54 @@
+.iScrollHorizontalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	height: 3px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	overflow: hidden;
+}
+
+.iScrollHorizontalScrollbar.iScrollBothScrollbars {
+	right: 18px;
+}
+
+.iScrollVerticalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	width: 3px;
+	bottom: 2px;
+	top: 2px;
+	right: 2px;
+	overflow: hidden;
+}
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars {
+	bottom: 18px;
+}
+
+.iScrollIndicator {
+	position: absolute;
+	background: #cc3f6e;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #EB97B4 #7C2845 #7C2845 #EB97B4;
+	border-radius: 8px;
+}
+
+.iScrollHorizontalScrollbar .iScrollIndicator {
+	height: 100%;
+	background: -moz-linear-gradient(left,  #4571B8 0%, #BA6D17 100%);
+	background: -webkit-linear-gradient(left,  #4571B8 0%,#BA6D17 100%);
+	background: -o-linear-gradient(left,  #4571B8 0%,#BA6D17 100%);
+	background: -ms-linear-gradient(left,  #4571B8 0%,#BA6D17 100%);
+	background: linear-gradient(to right,  #4571B8 0%,#BA6D17 100%);
+}
+
+.iScrollVerticalScrollbar .iScrollIndicator {
+	width: 100%;
+	background: -moz-linear-gradient(top, #4571B8 0%, #BA6D17 100%);
+	background: -webkit-linear-gradient(top,  #4571B8 0%,#BA6D17 100%);
+	background: -o-linear-gradient(top, #4571B8 0%,#BA6D17 100%);
+	background: -ms-linear-gradient(top, #4571B8 0%,#BA6D17 100%);
+	background: linear-gradient(to bottom,  #4571B8 0%,#BA6D17 100%);
+}

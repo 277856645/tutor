@@ -1,0 +1,28 @@
+.wrapper {
+	height: 500px;
+	margin-top: -250px;
+}
+
+.submit {
+	margin-top: 10px;
+}
+
+.remind {
+	margin-top: 30px;
+}
+
+.hascount {
+	color: #FFF;
+	font-size: 22px;
+}
+
+.haswsign {
+	color: #FFF;
+	font-weight: bold;
+}
+
+.haswsign a {
+	text-decoration: underline;
+}
+
+

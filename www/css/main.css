@@ -1,0 +1,123 @@
+body {
+	background-color: #FAFAFA;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+
+img {
+	border: 0;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+
+#student {
+	float: left;
+}
+
+#teacher {
+	float: right;
+}
+
+#student[state="on"],
+#teacher[state="on"] {
+	color: #4196D2;
+	background-color: #fff;
+}
+
+#student[state="off"],
+#teacher[state="off"] {
+	color: #D7D7D7;
+}
+
+.outer-table {   
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+     padding: 0;  
+     margin: 0;
+     background-color: #FAFAFA;
+}  
+
+.outer-table .img-td {
+	min-width: 70px;
+	width: 20%;
+	background-color: #eee;
+	text-align: center;
+	padding: 15px 5px 0 5px;
+}
+
+.outer-table .img-td > div {
+	width: 100%;
+	text-align: center;
+	font-family: "幼圆",	Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+
+.outer-table .img-td .name span {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.outer-table .img-td img {
+	width: 60px;
+}
+
+.inner-table .item {
+	font-family: "幼圆",	Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #4196D2;
+	width: 75px;
+}
+
+.inner-table .item-detail {
+	font-family: "幼圆",	Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	word-break: break-all;
+} 
+
+.outer-table > tbody > tr > td {
+	vertical-align: top;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 0 5px 0;
+}
+
+.outer-table > tbody > tr:last-child td { 
+	border-bottom: 0 !important;
+}
+
+.outer-table .img-td > div > div {
+	margin-top: 4px;
+}
+
+.outer-table .img-td .name {
+	margin-top: 8px;
+}
+
+.inner-table {
+	margin-right: 5px;
+}
+
+.inner-table td {
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+
+.outer-table td:first-child, 
+.inner-table td:first-child {
+	text-align: right;
+}
+
+.inner-table td:first-child {
+	padding-right: 5px;
+}
+
+/* 响应设计 */	
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) {}

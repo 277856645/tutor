@@ -1,0 +1,202 @@
+<!DOCTYPE>
+<html>
+	<head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>找家教</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/scrollBar.css" />
+        <link rel="stylesheet" type="text/css" href="css/me.css" />
+        
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/lib/iscroll.js"></script>
+        <script type="text/javascript" src="js/area-choose-for-mobile.js"></script>  
+        <script type="text/javascript" src="js/me.js"></script>       
+    </head>
+	<body>													
+		<div class="container">
+			<!-- 提示信息 -->
+			<div id="serverMsg" class="server-msg">
+				<div class="server-layer"></div>
+				<div class="server-content">加载中...</div>
+			</div>
+			
+			<!-- 内容 -->
+			<div id="content" class="invisible content">
+				<div class="head">
+					<div class="switch">
+						<div id="card" state="on">我的名片</div>
+						<div id="experience" state="off">教育经历</div>
+						<div id="publish" state="off">发布历史</div>
+					</div>
+				</div>
+				<div id="main" class="main">		
+					<div id="card-scroller" class="switch-item hide">
+						<div class="scroller">
+							<div id="portrait">
+								<img src="img/tutor-index_07.png" />
+								<input type="file" id="cardImage" class="hide" />&nbsp;&nbsp;
+								<input type="button" value="更换头像" onclick="cardImage.click();" />
+							</div>
+							<div nochange="nochange">
+								<div class="card-title">我的帐号</div>
+								<div class="card-content"><script>document.write(localStorage.username)</script></div>
+							</div>
+							<div id="realname">
+								<div class="card-title">姓名</div>
+								<div class="card-content" fieldName="realname"></div>
+							</div>
+							<div id="age">
+								<div class="card-title">年龄</div>
+								<div class="card-content" fieldName="age"></div>
+							</div>
+							<div id="sex">
+								<div class="card-title">性别</div>
+								<div class="card-content" fieldName="sex"></div>
+							</div>
+							<div id="address">
+								<div class="card-title">地区</div>
+								<div class="card-content">
+									<span fieldName="country"></span>
+									<span fieldName="province"></span>
+									<span fieldName="city"></span>
+								</div>
+							</div>
+							<div id="college">
+								<div class="card-title">院校/机构</div>
+								<div class="card-content" fieldName="college"></div>
+							</div>
+							<div id="education">
+								<div class="card-title">学历</div>
+								<div class="card-content" fieldName="education"></div>
+							</div>
+							<div id="contact">
+								<div class="card-title">联系方式</div>
+								<div class="card-content">
+									<div fieldName="contact1"></div>
+									<div fieldName="contact2"></div>
+								</div>
+							</div>
+							<div id="email">
+								<div class="card-title">电子邮件</div>
+								<div class="card-content" fieldName="email"></div>
+							</div>
+						</div>
+					</div>				
+				</div>				
+				<div id="foot" class="foot">
+					<table cellspacing="0" cellpadding="0" class="foot-table">
+						<tr>
+							<td>
+								<div class="ct-marg" state="on">
+									<img src="img/tutor-index_13_2.jpg" class="menu-img" />
+									<div class="text">我</div>
+								</div>
+							</td>
+							<td>
+								<div class="ct-marg" state="off" onclick="app.linkTo('main.html')">
+									<img src="img/tutor-index_15.jpg" class="menu-img" />
+									<div class="text">首页</div>
+								</div>
+							</td>
+							<td class="main-menu" state="off">
+								<img src="img/tutor-index_1.png" />
+							</td>
+							<td>
+								<div class="ct-marg" state="off">
+									<img src="img/tutor-index_18.jpg" class="menu-img" />
+									<div class="text">分类</div>
+								</div>
+							</td>
+							<td>
+								<div class="ct-marg" state="off">
+									<img src="img/tutor-index_20.jpg" class="menu-img" />
+									<div class="text">搜索</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<!-- card内容修改弹出层 -->
+			<div id="card-info-change" class="card-info-change hide">
+				<div class="card-change-layer"></div>
+				<div class="card-change-content">
+					<!-- 通用简单文本修改 -->
+					<div id="simple-text" class="simple-text hide">
+						<div></div>
+						<div><input type="text" /></div>
+						<div class="clear">
+							<input type="button" value="确定" class="btn" onclick="simpleTextCardInfoChange()" />
+							<input type="button" value="取消" class="btn" onclick="hideCardInfoChange()" />
+							<input type="hidden" name="fieldName" />
+						</div>
+					</div>
+					
+					<!-- 学历修改 -->
+					<div id="education-part" class="education-part hide">
+						<div></div>
+						<div>
+							<select>
+								<option></option>
+								<option>小学</option>
+								<option>初中</option>
+								<option>高中</option>
+								<option>中专</option>
+								<option>高职</option>
+								<option>专科</option>
+								<option>本科</option>
+								<option>硕士</option>
+								<option>博士</option>
+								<option>自考专科</option>
+								<option>自考本科</option>
+								<option>成人高考专科</option>
+								<option>成人高考本科</option>
+							</select>
+						</div>
+						<div class="clear">
+							<input type="button" value="确定" class="btn" onclick="educationPartCardInfoChange()" />
+							<input type="button" value="取消" class="btn" onclick="hideCardInfoChange()" />
+							<input type="hidden" name="fieldName" />
+						</div>						
+					</div>
+					
+					<!-- 性别修改 -->
+					<div id="sex-part" class="sex-part hide">
+						<div></div>
+						<div>
+							<select>
+								<option></option>
+								<option>男</option>
+								<option>女</option>								
+							</select>
+						</div>
+						<div class="clear">
+							<input type="button" value="确定" class="btn" onclick="sexPartCardInfoChange()" />
+							<input type="button" value="取消" class="btn" onclick="hideCardInfoChange()" />
+							<input type="hidden" name="fieldName" />
+						</div>						
+					</div>
+					
+					<!-- 联系方式修改 -->
+					<div id="contact-part" class="contact-part hide">
+						<div></div>
+						<div>
+							<input type="text" /><br />
+							<input type="text" />
+						</div>
+						<div class="clear">
+							<input type="button" value="确定" class="btn" onclick="contactPartCardInfoChange()" />
+							<input type="button" value="取消" class="btn" onclick="hideCardInfoChange()" />
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

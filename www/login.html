@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <title>找家教</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+        
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/passwd-tool.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+		<form method="post" id="login-form">
+			<div class="container">
+				<div id="serverMsg" class="server-msg hide"><div class="server-layer"></div><div class="server-content"></div></div>
+				<div class="wrapper">
+					<div class="logo">
+						<img src="img/tutor-sign_03.jpg" />
+					</div>
+					<div class="signsheet my-corner-all my-corner-clip">
+						<div class="icon">
+							<img src="img/tutor-sign_07.jpg" class="my-corner-left my-corner-clip" />
+						</div>
+						<div class="blank">
+							<input type="text" name="name" placeholder="用户名" id="name" maxlength="50" autocomplete="off" 
+									class="input my-corner-right my-corner-clip" autofocus="autofocus" />
+						</div>
+					</div>
+					<div class="signsheet my-corner-all my-corner-clip">
+						<div class="icon">
+							<img src="img/tutor-sign_12.jpg" class="my-corner-left" />
+						</div>
+						<div class="blank">
+							<input type="password" name="passwd" id="passwd" placeholder="密码" maxlength="20" 
+									class="input my-corner-right my-corner-clip" />
+						</div>
+					</div>
+					<div class="signsheet2">
+						<input type="checkbox" id="remCkbox" onchange="remLoginInfo(this);" />
+						<label for="remCkbox">记住密码</label>
+					</div>
+					<div class="sign">
+						<input type="button" value="登 录" class="submit my-corner-clip my-corner-all" 
+								onclick="submitForm(this);"
+								onfocus="this.blur();" />
+					</div>
+					<div class="remind">
+						<span class="nocount">没有账户?</span>
+						<span class="nowsign"><a href="sign.html">现在注册</a></span>
+					</div>
+				</div>
+			</div>
+		</form>
+    </body>
+</html>
