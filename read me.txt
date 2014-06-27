@@ -1,0 +1,47 @@
+phonegap不支持iframe
+
+
+phonegap安装androidSDK注意点：
+	~/.bashrc文件末尾添加如下行
+		ANDROID_SDK_HOME=/home/zw/
+		ANDROID_PATH=$ANDROID_SDK_HOME/softwares/adt-bundle-linux/sdk
+		PATH=$ANDROID_PATH/tools:$ANDROID_PATH/platform-tools:$PATH
+
+		
+phpmyadmin出现“高级功能尚未完全设置,部分功能未激活。请点击这里查看原因。”解决办法：
+	1)/usr/share/doc/phpmyadmin/examples/create_tables.sql导入phpmyadmin(新建)表中
+	2)在/etc/phpmyadmin/config/config.inc.php文件修改如下内容
+		/* Optional: Advanced phpMyAdmin features */
+		$cfg['Servers'][$i]['pmadb'] = 'phpmyadmin';
+		$cfg['Servers'][$i]['bookmarktable'] = 'pma__bookmark';
+		$cfg['Servers'][$i]['relation'] = 'pma__relation';
+		$cfg['Servers'][$i]['table_info'] = 'pma__table_info';
+		$cfg['Servers'][$i]['table_coords'] = 'pma__table_coords';
+		$cfg['Servers'][$i]['pdf_pages'] = 'pma__pdf_pages';
+		$cfg['Servers'][$i]['column_info'] = 'pma__column_info';
+		$cfg['Servers'][$i]['history'] = 'pma__history';
+		$cfg['Servers'][$i]['table_uiprefs'] = 'pma__table_uiprefs';
+		$cfg['Servers'][$i]['tracking'] = 'pma__tracking';
+		$cfg['Servers'][$i]['designer_coords'] = 'pma__designer_coords';
+		$cfg['Servers'][$i]['userconfig'] = 'pma__userconfig';
+		$cfg['Servers'][$i]['recent'] = 'pma__recent';
+
+
+phpmyadmin出现mcrypt警告的解决办法：
+	apt-get install php5-mcrypt
+	mv -i /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/  PS:可无此操作
+	php5enmod mcrypt
+	service apache2 restart
+
+
+phonegap安装的插件：
+	cordova plugin add org.apache.cordova.file
+	
+	
+/******************************** 其他 ***************************************/
+iscroll.js
+	结构必须为<div container><div scroll>......</div></div>，scroll的高度不能设置固定值或百分比
+	当页面或滚动区域display:none时滚动条不可正确创建
+	
+	
+	
